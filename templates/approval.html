@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poster Approval | Jewellery AI</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f1f3f6;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #2c2c2c;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        .header p {
+            margin-top: 6px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 14px;
+            border: 1px solid #e6e8ec;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 22px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 22px;
+        }
+
+        .poster-preview {
+            text-align: center;
+        }
+
+        .poster-preview img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .info-box {
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 16px;
+            border: 1px solid #e6e8ec;
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 17px;
+            color: #c9a24d;
+            font-weight: 600;
+        }
+
+        .info-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        .actions {
+            display: flex;
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 13px;
+            font-size: 15px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.15s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .approve {
+            background: #1f9d55;
+            color: white;
+            box-shadow: 0 4px 12px rgba(31,157,85,0.35);
+        }
+
+        .reject {
+            background: #dc2626;
+            color: white;
+            box-shadow: 0 4px 12px rgba(220,38,38,0.35);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        @media (max-width: 850px) {
+            .card {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Poster Approval Dashboard</h1>
+        <p>AI-generated jewellery poster — review before posting</p>
+    </div>
+
+    <div class="card">
+
+        <!-- Poster -->
+        <div class="poster-preview">
+            <img src="{{ url_for('static', filename='posters/latest.jpg') }}" alt="Generated Poster">
+        </div>
+
+        <!-- Info + Actions -->
+        <div class="details">
+
+            <div class="info-box">
+                <h3>Poster Details</h3>
+                <p>
+                    This poster was generated using live gold & silver prices.
+                    The design and caption were chosen by Agentic AI based on market trends.
+                    Please approve or reject before posting.
+                </p>
+            </div>
+
+            <form action="/decision" method="post" class="actions">
+                <button class="btn approve" name="decision" value="APPROVE">
+                    ✅ Approve
+                </button>
+                <button class="btn reject" name="decision" value="REJECT">
+                    ❌ Reject
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2025 Jewellery Poster AI · Agentic AI with Human Approval
+    </div>
+
+</div>
+
+</body>
+</html>

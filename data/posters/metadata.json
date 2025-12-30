@@ -1,0 +1,56 @@
+{
+    "2025-12-24_morning": {
+        "date": "2025-12-24",
+        "slot": "morning",
+        "gold_22k": 56792,
+        "silver": 74000,
+        "layout": "center_focus",
+        "image_used": "assets\\products\\rings\\pic3.jpeg",
+        "poster_path": "posters\\generated\\2025-12-24_morning.jpg"
+    },
+    "2025-12-24_evening": {
+        "date": "2025-12-24",
+        "slot": "evening",
+        "gold_22k": 56792,
+        "silver": 74000,
+        "layout": "center_focus",
+        "image_used": "assets\\products\\rings\\pic3.jpeg",
+        "poster_path": "static/posters/2025-12-24_evening.jpg"
+    },
+    "2025-12-29_evening": {
+        "date": "2025-12-29",
+        "slot": "evening",
+        "gold_22k": 56792,
+        "silver": 74000,
+        "layout": "center_focus",
+        "image_used": "assets\\products\\rings\\pic5.jpeg",
+        "poster_path": "static/posters/2025-12-29_evening.jpg"
+    },
+    "2025-12-30_evening": {
+        "date": "2025-12-30",
+        "slot": "evening",
+        "gold_22k": 56792,
+        "silver": 74000,
+        "layout": "center_focus",
+        "image_used": "assets\\products\\rings\\pic2.jpeg",
+        "poster_path": "static/posters/latest.jpg"
+    },
+    "2025-12-30_morning": {
+        "date": "2025-12-30",
+        "slot": "morning",
+        "gold_22k": 56792,
+        "silver": 74000,
+        "layout": "left_focus",
+        "image_used": "assets\\products\\rings\\pic4.jpeg",
+        "poster_path": "static/posters/latest.jpg"
+    },
+    "2025-12-30_afternoon": {
+        "date": "2025-12-30",
+        "slot": "afternoon",
+        "gold_22k": 56792,
+        "silver": 74000,
+        "layout": "left_focus",
+        "image_used": "assets\\products\\rings\\pic1.jpeg",
+        "poster_path": "static/posters/2025-12-30_afternoon.jpg"
+    }
+}
